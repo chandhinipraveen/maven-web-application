@@ -18,11 +18,11 @@ sh "${mavenHome}/bin/mvn clean package"
 stage('ExecuteSonarQubeReport'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
-
+/*
 stage('UploadArtifactIntoNexusRepo'){
 sh "${mavenHome}/bin/mvn deploy"
 }
-
+*/
 stage('DeployAppintoTomcatServer')
 {
 sshagent(['b6f2425d-4c5c-47ae-a129-8894d0685456']) {
